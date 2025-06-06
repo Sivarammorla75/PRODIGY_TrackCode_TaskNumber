@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⏱ Smart Stopwatch</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>⏱ Smart Stopwatch</h1>
+    <div id="display">00:00:00.000</div>
+
+    <div class="buttons">
+      <button id="startPause">▶️ Start</button>
+      <button id="lap" disabled>⏱ Lap</button>
+      <button id="reset" disabled>♻️ Reset</button>
+      <button id="countdownToggle">🔄 Mode: Stopwatch</button>
+      <button id="exportCsv">📤 Export CSV</button>
+      <button id="toggleFormat">🔀 Toggle Format</button>
+    </div>
+
+    <div class="select-group">
+      <label for="soundSelect">🔊 Alert Sound:</label>
+      <select id="soundSelect">
+        <option value="default">Default</option>
+        <option value="tick">Tick</option>
+        <option value="beep">Beep</option>
+      </select>
+    </div>
+
+    <ul id="laps"></ul>
+    <div id="chartWrapper">
+      <canvas id="lapChart"></canvas>
+    </div>
+
+    <div class="footer">
+      <button id="themeToggle">🌜 Toggle Theme</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
